@@ -17,41 +17,41 @@ public class Automation_Practice_Task {
 	{
 
 		WebDriver driver = new ChromeDriver();
-		String expdata="Wireless Earbuds";
+		String expdata="Soundbar";
 		driver.get("https://testautomationpractice.blogspot.com/");
-		
+
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		Actions act= new Actions(driver);
-		
+
 		act.scrollToElement(driver.findElement(By.id("pagination"))).perform();
 
-		List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
-		
-<<<<<<< HEAD
-		List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
-		
+		List<WebElement> li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
+
+
+		//List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
+
+		//		for(WebElement ele:li)
+		//		{
+		//			try {
+		//			System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td[contains(.,'$')]")).getText());
+
 		for(WebElement ele:li)
 		{
-			try {
-			System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td[contains(.,'$')]")).getText());
-=======
-		for(WebElement ele:li)
-		{
-			try {
-			System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td[contains(.,'$')]")));
->>>>>>> 25e029f1d2a6c3b691704a5ca8741c3ab52741e5
-			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td/input")).click();
+			try 
+			{
+				//System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//td[contains(.,'"+expdata+"')]/following-sibling::td[1]")).getText());
+
+				driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td/input")).click();
+				break;
 			}
 			catch(Exception e)
 			{
 				ele.click();
 			}
-<<<<<<< HEAD
+
 		}
-	
-=======
->>>>>>> 25e029f1d2a6c3b691704a5ca8741c3ab52741e5
+		Thread.sleep(2000);
+		driver.quit();
 	}
-	
 }
