@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tasks_01.Automation_Practice_Task">
+      <class name="tasks_01.Amazon_Task">
         <methods>
-          <include name="PaginationTable"/>
+          <include name="AmazonTask1"/>
         </methods>
-      </class> <!-- tasks_01.Automation_Practice_Task -->
+      </class> <!-- tasks_01.Amazon_Task -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
