@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-20T13:24:49 IST" name="Default suite" finished-at="2026-02-20T13:25:07 IST" duration-ms="17574">
+  <suite started-at="2026-02-20T17:23:45 IST" name="Default suite" finished-at="2026-02-20T17:24:17 IST" duration-ms="31837">
     <groups>
     </groups>
-    <test started-at="2026-02-20T13:24:49 IST" name="Default test" finished-at="2026-02-20T13:25:07 IST" duration-ms="17574">
-      <class name="tasks_01.Automation_Practice_2">
-        <test-method signature="dynamicWebTable()[pri:0, instance:tasks_01.Automation_Practice_2@67c27493]" started-at="2026-02-20T13:24:49 IST" name="dynamicWebTable" finished-at="2026-02-20T13:25:07 IST" duration-ms="17454" status="PASS">
+    <test started-at="2026-02-20T17:23:45 IST" name="Default test" finished-at="2026-02-20T17:24:17 IST" duration-ms="31837">
+      <class name="tasks_01.Automation_Practice_Task">
+        <test-method signature="PaginationTable()[pri:0, instance:tasks_01.Automation_Practice_Task@67c27493]" started-at="2026-02-20T17:23:45 IST" name="PaginationTable" finished-at="2026-02-20T17:24:17 IST" duration-ms="31619" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dynamicWebTable -->
-      </class> <!-- tasks_01.Automation_Practice_2 -->
+        </test-method> <!-- PaginationTable -->
+      </class> <!-- tasks_01.Automation_Practice_Task -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
