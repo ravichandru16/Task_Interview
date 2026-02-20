@@ -28,10 +28,12 @@ public class Automation_Practice_Task {
 		
 		act.scrollToElement(driver.findElement(By.id("pagination"))).perform();
 		
-		List<WebElement>li= driver.findElements(By.xpath("//table[@id='productTable']//td"));
+		List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
+		
 		for(WebElement ele:li)
 		{
-			
+			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'Smartphone')]/td[contains(.,'$')]"));
+			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'Smartphone')]/td/input")).click();
 		}
 	
 	}
