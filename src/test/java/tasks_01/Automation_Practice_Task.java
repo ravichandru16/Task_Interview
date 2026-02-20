@@ -27,8 +27,7 @@ public class Automation_Practice_Task {
 		Actions act= new Actions(driver);
 		
 		act.scrollToElement(driver.findElement(By.id("pagination"))).perform();
-		
-<<<<<<< HEAD
+
 		List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
 		
 		for(WebElement ele:li)
@@ -41,14 +40,6 @@ public class Automation_Practice_Task {
 			{
 				ele.click();
 			}
-=======
-		List<WebElement>li= driver.findElements(By.xpath("//table[@id='productTable']//td"));
-		for(WebElement ele:li)
-		{
-			
->>>>>>> f9c066029071569138ec28816be2533f87a9e992
-		}
-	
 	}
 	
 }
