@@ -7,9 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class Automation_Practice_Task {
@@ -32,8 +30,14 @@ public class Automation_Practice_Task {
 		
 		for(WebElement ele:li)
 		{
-			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'Smartphone')]/td[contains(.,'$')]"));
-			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'Smartphone')]/td/input")).click();
+			try {
+			System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td[contains(.,'$')]")).getText());
+			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td/input")).click();
+			}
+			catch(Exception e)
+			{
+				ele.click();
+			}
 		}
 	
 	}
