@@ -28,17 +28,17 @@ public class Automation_Practice_Task {
 		
 		act.scrollToElement(driver.findElement(By.id("pagination"))).perform();
 		
-		WebElement ele=driver.findElement(By.xpath("//table[@id='productTable']//tr/td[contains(.,'Smartphone')]"));
-		for(int i=2;i<5;i++)
+		List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
+		
+		for(WebElement ele:li)
 		{
 			try {
-				driver.findElement(By.xpath("//table[@id='productTable']//tr/td[contains(.,'"+expdata+"')]/..//input")).click();
-				System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr/td[contains(.,'"+expdata+"')]/../td[contains(.,'$')]")).getText());
-				break;
+			System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td[contains(.,'$')]")));
+			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td/input")).click();
 			}
 			catch(Exception e)
 			{
-				driver.findElement(By.xpath("//ul[@id='pagination']//a[contains(.,'"+i+"')]")).click();
+				ele.click();
 			}
 		}
 	
