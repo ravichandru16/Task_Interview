@@ -7,9 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class Automation_Practice_Task {
@@ -30,16 +28,30 @@ public class Automation_Practice_Task {
 
 		List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
 		
+<<<<<<< HEAD
+		List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
+		
+		for(WebElement ele:li)
+		{
+			try {
+			System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td[contains(.,'$')]")).getText());
+=======
 		for(WebElement ele:li)
 		{
 			try {
 			System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td[contains(.,'$')]")));
+>>>>>>> 25e029f1d2a6c3b691704a5ca8741c3ab52741e5
 			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td/input")).click();
 			}
 			catch(Exception e)
 			{
 				ele.click();
 			}
+<<<<<<< HEAD
+		}
+	
+=======
+>>>>>>> 25e029f1d2a6c3b691704a5ca8741c3ab52741e5
 	}
 	
 }
