@@ -20,7 +20,7 @@ public class Amazon_Task {
 		Actions act= new Actions(driver);
 		act.moveToElement(driver.findElement(By.xpath("//span[@class='icp-nav-link-inner']"))).perform();
 		act.moveToElement(driver.findElement(By.xpath("//span[@class='nav-text' and contains(.,'MR')]/i"))).click().perform();
-		
+		//test data
 		Thread.sleep(3000);
 		driver.quit();
 	}
