@@ -27,13 +27,19 @@ public class Automation_Practice_Task {
 		Actions act= new Actions(driver);
 		
 		act.scrollToElement(driver.findElement(By.id("pagination"))).perform();
+
+		List<WebElement>li= driver.findElements(By.xpath("//ul[@id='pagination']//a"));
 		
-		List<WebElement>li= driver.findElements(By.xpath("//table[@id='productTable']//td"));
 		for(WebElement ele:li)
 		{
-			
-		}
-	
+			try {
+			System.out.println(driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td[contains(.,'$')]")));
+			driver.findElement(By.xpath("//table[@id='productTable']//tr[contains(.,'"+expdata+"')]/td/input")).click();
+			}
+			catch(Exception e)
+			{
+				ele.click();
+			}
 	}
 	
 }
